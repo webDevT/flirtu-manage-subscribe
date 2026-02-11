@@ -1,0 +1,182 @@
+@import "vars"
+@import "fonts"
+
+h1 
+	margin: 0
+	line-height: 1
+.manage-subscription
+	width: 380px
+	margin-left: auto 
+	margin-right: auto
+	max-width: 100%
+	padding-left: 15px 
+	padding-right: 15px
+	font-family: outfit, sans-serif
+	font-size: 16px
+	color: #1A1A1AE6
+	padding-top: 15px
+.header-back-button-link 
+	margin-bottom: 30px
+	text-decoration: none
+	display: block
+.header-back-button 
+	display: flex 
+	align-items: center
+.header-back-button-icon 
+	opacity: 0.6
+.header-back-button-content
+	display: flex
+	align-items: center
+.header-back-button-icon-wrapper
+	box-shadow: 0 2px 5px 0 rgba(50, 50, 93, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.07)
+	width: 28px
+	height: 28px
+	border-radius: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-left: 8px
+	margin-right: 8px
+	svg
+		width: 12px
+		fill: #1A1A1AB2
+.header-back-button h1
+	color: #1A1A1AE6
+	font-size: 14px
+	font-weight: 600
+	margin-top: 0
+	margin-bottom: 0
+.manage-subscription__label
+	display: block
+	font-size: 12px
+	font-weight: 600
+	letter-spacing: 0.1rem
+	text-transform: uppercase
+	color: #6b6b6b
+	margin-bottom: 16px
+.manage-subscription__plan-card
+	background: rgba(#000, .04)
+	border: 1px solid rgba(#000, .1)
+	border-radius: 16px
+	padding: 24px
+	margin-bottom: 10px
+.manage-subscription__plan-header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 28px
+	padding-bottom: 16px
+	border-bottom: 1px solid rgba(26,26,26, .2)
+.manage-subscription__plan-badge
+	font-size: 11px
+	font-weight: 700
+	letter-spacing: .1em
+	color: #10b981
+	background: rgba(52, 211, 153, .2)
+	padding: 8px 10px
+	border-radius: 6px
+	display: inline-block
+.manage-subscription__plan-name
+	font-size: 22px
+	font-weight: 700
+	color: rgba(26,26,26,.9019607843)
+	display: flex
+	align-items: center
+	gap: 8px
+.manage-subscription__plan-price
+	display: flex
+	align-items: baseline
+	gap: 6px
+	margin: 0
+	strong 
+		font-size: 18px
+.manage-subscription__plan-renewal
+	margin: 0
+	font-size: 14px
+.manage-subscription__date
+	font-weight: 600
+.manage-subscription__plan-details
+	gap: 16px
+	display: flex
+	flex-direction: column
+.manage-subscription__advantages
+.manage-subscription__advantages-title
+	font-size: 18px
+	font-weight: 700
+	color: rgba(26, 26, 26, .9)
+	margin: 0 0 12px 0
+	letter-spacing: .02em
+.manage-subscription__advantages-list
+	margin: 0
+	padding: 0
+	list-style: none
+	li
+		position: relative
+		padding-left: 28px
+		margin-bottom: 8px
+		font-size: 15px
+		line-height: 1.45
+		color: rgba(26, 26, 26, .85)
+		&::before
+			content: "✓"
+			position: absolute
+			left: 0
+			top: 4px
+			width: 18px
+			height: 18px
+			border-radius: 50%
+			background: rgb(0, 116, 212)
+			color: #fff
+			font-size: 9px
+			font-weight: 700
+			text-align: center
+			line-height: 18px
+		&:last-child
+			margin-bottom: 0
+.manage-subscription__cancel-btn
+	display: block
+	width: 100%
+	padding: 14px 24px
+	background: rgba(0, 0, 0, 0)
+	border: 1px solid rgba(#1A1A1AE6, .25)
+	border-radius: 12px
+	color: rgba(#1A1A1AE6, .6)
+	font-weight: 600
+	cursor: pointer
+	transition: background .2s, border-color .2s, color .2s
+	font-size: 16px
+.manage-subscription__cancel-hint 
+	text-align: center 
+	font-size: 14px
+	color: rgba(#1A1A1AE6, .6)
+	line-height: 1.5
+	padding-left: 10px
+	padding-right: 10px
+	a
+		color: rgba(#1A1A1AE6, .6)
+		text-decoration: underline
+.manage-subscription__empty-state 
+	text-align: center
+	.manage-subscription__empty-text 
+		font-size: 18px
+		font-weight: 700
+.manage-subscription__btn-vip
+	display: block
+	width: 100%
+	padding: 14px 24px
+	background: rgb(0, 116, 212)
+	color: #fff
+	font-size: 16px
+	font-weight: 600
+	text-align: center
+	text-decoration: none
+	border: none
+	border-radius: 12px
+	cursor: pointer
+	box-sizing: border-box
+	transition: background .2s, opacity .2s
+	&:hover
+		background: rgb(0, 99, 181)
+	&:active
+		opacity: .95
+@import "media"
