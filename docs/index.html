@@ -75,10 +75,48 @@
 	</article>
 
 	
-	<p class="manage-subscription__cancel-hint">You can <a href="">cancel your subscription</a> anytime and continue using it till end of your billing period.</p>
+	<p class="manage-subscription__cancel-hint">You can <a href="#" class="manage-subscription__cancel-link" id="cancel-subscription-link">cancel your subscription</a> anytime and continue using it till end of your billing period.</p>
 </main>
 
 </div>
 
+<!-- Cancel subscription modal -->
+<div class="manage-subscription__modal-overlay" id="cancel-modal" aria-hidden="true">
+	<div class="manage-subscription__modal" role="dialog" aria-labelledby="cancel-modal-title">
+		<p class="manage-subscription__modal-text" id="cancel-modal-title">Are you sure that you want to cancel subscription?</p>
+		<div class="manage-subscription__modal-actions">
+			<button type="button" class="manage-subscription__modal-btn manage-subscription__modal-btn--yes" id="cancel-modal-yes">Yes</button>
+			<button type="button" class="manage-subscription__modal-btn manage-subscription__modal-btn--no" id="cancel-modal-no">No</button>
+		</div>
+	</div>
+</div>
+
+	<script>
+	(function() {
+	var overlay = document.getElementById('cancel-modal');
+	var openLink = document.getElementById('cancel-subscription-link');
+	var closeBtn = document.getElementById('cancel-modal-no');
+
+	if (!overlay || !openLink || !closeBtn) return;
+
+	function openModal(e) {
+		e.preventDefault();
+		overlay.classList.add('is-open');
+		overlay.setAttribute('aria-hidden', 'false');
+	}
+
+	function closeModal() {
+		overlay.classList.remove('is-open');
+		overlay.setAttribute('aria-hidden', 'true');
+	}
+
+	openLink.addEventListener('click', openModal);
+	closeBtn.addEventListener('click', closeModal);
+	overlay.addEventListener('click', function(e) {
+		if (e.target === overlay) closeModal();
+	});
+})();
+
+	</script>
 </body>
 </html>
