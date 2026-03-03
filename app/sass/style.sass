@@ -181,4 +181,56 @@ h1
 		background: rgb(0, 99, 181)
 	&:active
 		opacity: .95
+.manage-subscription__modal-overlay
+	display: none
+	position: fixed
+	inset: 0
+	background: rgba(0, 0, 0, .4)
+	z-index: 100
+	align-items: center
+	justify-content: center
+	padding: 20px
+	box-sizing: border-box
+	&.is-open
+		display: flex
+.manage-subscription__modal
+	width: 100%
+	max-width: 340px
+	background: #fff
+	border: 1px solid rgba(#000, .1)
+	border-radius: 16px
+	padding: 24px
+	box-shadow: 0 10px 40px rgba(0, 0, 0, .15)
+	font-family: outfit, sans-serif
+.manage-subscription__modal-text
+	margin: 0 0 20px 0
+	font-size: 16px
+	line-height: 1.5
+	color: rgba(26, 26, 26, .9)
+.manage-subscription__modal-actions
+	display: flex
+	gap: 12px
+	justify-content: space-between
+.manage-subscription__modal-btn
+	padding: 12px 20px
+	font-size: 15px
+	font-weight: 600
+	border-radius: 12px
+	cursor: pointer
+	transition: background .2s, border-color .2s, color .2s
+	border: none
+	font-family: outfit, sans-serif
+	width: 50%
+	&--yes
+		background: transparent
+		color: #b91c1c
+		border: 1px solid #b91c1c
+		&:hover
+			background: rgba(185, 28, 28, .08)
+	&--no
+		background: rgb(0, 116, 212)
+		color: #fff
+		border: none
+		&:hover
+			background: rgb(0, 99, 181)
 @import "media"
